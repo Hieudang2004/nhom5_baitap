@@ -9,6 +9,7 @@ class Myguide extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          tooltip: "Back",
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text('Guide'),
@@ -26,7 +27,7 @@ class Myguide extends StatelessWidget {
         block2(), //tiêu đề
         const SizedBox(height: 5),
         block3(),
-        const SizedBox(height: 50),
+        const SizedBox(height: 20),
         const SizedBox(width: 10),
         block4(),
         block5(),

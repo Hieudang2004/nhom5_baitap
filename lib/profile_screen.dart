@@ -37,6 +37,11 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          tooltip: "Back",
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Text('Thông tin cá nhân', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blue.shade700,
         automaticallyImplyLeading: false, 

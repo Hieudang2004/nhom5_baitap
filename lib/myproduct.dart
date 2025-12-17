@@ -24,6 +24,7 @@ class _MyProductState extends State<MyProduct> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          tooltip: "Back",
           onPressed: () => Navigator.pop(context),
         ),
         backgroundColor: const Color.fromARGB(255, 75, 58, 888),

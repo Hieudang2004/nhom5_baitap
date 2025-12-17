@@ -99,6 +99,7 @@ class _CountDownTimeAppState extends State<CountDownTimeApp> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          tooltip: "Back",
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text('Bộ Đếm Ngược Thời Gian'),
