@@ -52,15 +52,15 @@ class Myclassrom extends StatelessWidget {
     );
   }
 
-  Color randomColor() {
-    final Random random = Random();
-    return Color.fromARGB(
-      255,
-      random.nextInt(256),
-      random.nextInt(256),
-      random.nextInt(256),
-    );
-  }
+  // Color randomColor() {
+  //   final Random random = Random();
+  //   return Color.fromARGB(
+  //     255,
+  //     random.nextInt(256),
+  //     random.nextInt(256),
+  //     random.nextInt(256),
+  //   );
+  // }
 
   Widget item(int index, String imageUrl) {
     // Danh sách tiêu đề và mã lớp
@@ -99,7 +99,7 @@ class Myclassrom extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: randomColor(),
+        //color: randomColor(),
         image: DecorationImage(
           image: NetworkImage(imageUrl),
           fit: BoxFit.cover,
