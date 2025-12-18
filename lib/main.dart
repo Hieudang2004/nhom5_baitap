@@ -69,7 +69,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
       body: Stack(
         children: [
-          // Ảnh nền FULL MÀN HÌNH, nằm ngoài mọi thứ
           Positioned.fill(
             child: Image.asset(
               'assets/images/background.jpg',
@@ -77,13 +76,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-          // Lớp bố cục menu + nội dung đè lên ảnh nền
           Row(
             children: [
-              // Menu (nền trắng, không ảnh nền)
               if (_isExpanded)
                 Container(
-                  width: 235,
+                  width: 285,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -109,102 +106,161 @@ class _HomeScreenState extends State<HomeScreen> {
                             topRight: Radius.circular(15),
                           ),
                         ),
-                        child: const Text(
-                          'Họ tên: Đặng Duy Hiếu\nMã sinh viên: 22T1020114',
-                          style: TextStyle(fontSize: 16, color: Colors.white),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Avatar
+                            CircleAvatar(
+                              radius: 24,
+                              backgroundColor: Colors.white,
+                              child: Icon(
+                                Icons.person,
+                                size: 30,
+                                color: Colors.blueAccent,
+                              ),
+                            ),
+                            SizedBox(width: 15),
+
+                            // Text
+                            const Expanded(
+                              child: Text(
+                                'Họ tên: Đặng Duy Hiếu\nMã sinh viên: 22T1020114',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
 
                       Expanded(
-                          child: ListView(
-                            children: [
-                              ListTile(
-                                title: Text('Home'),     
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4),                
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai1'),
+                        child: ListView(
+                          children: [
+                            ListTile(
+                              title: Text('Bài 1 - Home'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Classroom'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai2'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai1'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 2 -Classroom'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Guide'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai3'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai2'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 3 - Guide'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Hotel'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai4'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai3'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 4 - Hotel'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Change Color App'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai5'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai4'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 5 - Change Color App'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Count Number App'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai6'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai5'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 6 - Count Number App'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Count Down Time App'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai7'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai6'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 7 - Count Down Time App'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('FormLogin'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai8'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai7'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 8 - FormLogin'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('FormRegister'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai9'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai8'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 9 - FormRegister'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Product List from API'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai10'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai9'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 10 - Product List from API'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('NewsListScreen'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai11'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai10'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 11 - NewsListScreen'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                              ListTile(
-                                title: Text('Login Screen with API'),
-                                trailing: Icon(Icons.chevron_right),
-                                contentPadding: EdgeInsets.only(left: 16, right: 4), 
-                                onTap: () =>
-                                    Navigator.pushNamed(context, '/bai12'),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai11'),
+                            ),
+                            ListTile(
+                              title: Text('Bài 12 - Login Screen with API'),
+                              trailing: Icon(Icons.chevron_right),
+                              contentPadding: EdgeInsets.only(
+                                left: 16,
+                                right: 4,
                               ),
-                            ],
-                          ),
+                              onTap: () =>
+                                  Navigator.pushNamed(context, '/bai12'),
+                            ),
+                          ],
                         ),
+                      ),
                     ],
                   ),
                 ),
